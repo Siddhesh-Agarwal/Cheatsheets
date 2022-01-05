@@ -1,0 +1,14 @@
+body {
+    margin-inline: 10%;
+}
+
+h1 {
+    font-size: 64px;
+    font-weight: 500;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Noto Sans", sans-serif;
+    color: #111827;
+    line-height: 1.5;
+}
+
+.row .card {margin: 10px;padding-inline: 0;min-width: 18rem;}
+.row .card img {width: 100%;}

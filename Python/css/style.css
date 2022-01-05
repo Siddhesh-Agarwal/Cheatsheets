@@ -1,0 +1,23 @@
+* {
+    scroll-behavior: smooth;
+    font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Noto Sans", sans-serif;
+}
+
+/* Header font */
+h1, h2, h3, h4, h5, h6 {line-height: 1.5;}
+h2, h3, h4, h5, h6 {margin-top: 16px;}
+h1 {font-size: 40px;}
+h2 {font-size: 32px;}
+h3 {font-size: 24px;}
+
+/* Images */
+#banner {
+    width: 100%;
+    height: auto;
+}
+
+img {
+    display: block;
+    margin-inline: auto;
+    margin-bottom: 18px;
+}
