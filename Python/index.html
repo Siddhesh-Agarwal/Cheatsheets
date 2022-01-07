@@ -56,7 +56,7 @@
         <li>Prints the result(s) on the screen. (if any)</li>
         <li>And then loops back to read the next statement.</li>
     </ul>
-    <p><b>Note:</b> Python shell is a great place to test various small code snippets. We will be mainly using it. If a code snippet is starting with <code>>>></code> then it being executed in pyton shell.</p>
+    <p class="lead"><b>Note:</b> Python shell is a great place to test various small code snippets. We will be mainly using it. If a code snippet is starting with <code>>>></code> then it being executed in pyton shell.</p>
     <hr>
 
     <!-- Main Datatypes in Python -->
@@ -87,7 +87,7 @@
         <div class="col-sm-3"><code class="language-py">&lt;class 'list'&gt;</code></div>
         <div class="col-sm-5"><code class="language-py">[-2, 0, 1, 3.1415, 'Hello, world!']</code></div>
     </div>
-    <p><b>NOTE:</b> There are more datatypes like sets, Dictionaries, complex numbers, tuples, boolean.</p>
+    <p class="lead"><b>NOTE:</b> There are more datatypes like sets, Dictionaries, complex numbers, tuples, boolean.</p>
     <hr>
 
     <!-- Mathematical operators in Python -->
@@ -204,6 +204,29 @@
     <hr>
 
     <h1>Boolean operations</h1>
+    <p>Boolean operations are used to combine logical expressions. For example, <code>True and False</code> is False, <code>True or False</code> is True, and <code>not True</code> is False.</p>
+    <p>The following table shows the logical operators and their corresponding boolean values:</p>
+    <div class="table-responsive" style="max-width: 200px; margin-left: 24px;">
+        <table class="table table-sm table-hover">
+            <thead>
+                <tr>
+                    <th>A</th>
+                    <th>not A</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>True</code></td>
+                    <td><code>False</code></td>
+                </tr>
+                <tr>
+                    <td><code>False</code></td>
+                    <td><code>True</code></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <br>
     <table class="table table-sm table-hover" style="margin-inline: 24px;max-width: calc(100% - 48px);">
         <thead>
             <tr>
@@ -211,6 +234,7 @@
                 <th>B</th>
                 <th>A and B</th>
                 <th>A or B</th>
+                <th>A xor B</th>
             </tr>
         </thead>
         <tbody>
@@ -219,20 +243,24 @@
                 <td><code>True</code></td>
                 <td><code>True</code></td>
                 <td><code>True</code></td>
+                <td><code>False</code></td>
             </tr>
             <tr>
                 <td><code>True</code></td>
                 <td><code>False</code></td>
                 <td><code>False</code></td>
                 <td><code>True</code></td>
+                <td><code>True</code></td>
             </tr>
             <tr>
                 <td><code>False</code></td>
                 <td><code>True</code></td>
                 <td><code>False</code></td>
                 <td><code>True</code></td>
+                <td><code>True</code></td>
             </tr>
             <tr>
+                <td><code>False</code></td>
                 <td><code>False</code></td>
                 <td><code>False</code></td>
                 <td><code>False</code></td>
@@ -240,6 +268,7 @@
             </tr>
         </tbody>
     </table>
+    <p class="lead"><b>NOTE:</b> <code>nand</code> is equivalent to </code>not and</code>. <code>nor</code> is equivalent to <code>not or</code> and <code>xnor</code> is equivalent to <code>not xor</code>.</p>
     <hr>
 
     <!-- Strings in Python -->
@@ -263,7 +292,7 @@
     It covers more than one line
     and is beautiful!'''
     </code></pre>
-    <p><b>NOTE:</b> You can choose any one of the above but it is recommended to be consistent with their use within a program.</p>
+    <p class="lead"><b>NOTE:</b> You can choose any one of the above but it is recommended to be consistent with their use within a program.</p>
     <p>As the next step, you can use the <code class="lang-py">print()</code> function to output your string in the console window. This lets you review your code and ensure that all functions well.</p>
     <pre><code class="lang-py">
         >>> print("Hello, world!")
@@ -278,7 +307,7 @@
         >>> string_1 + " " + string_2
         "Hello World!"
     </code></pre>
-    <p><b>NOTE:</b> You can’t apply + operator to two different data types e.g. string <code>+</code> integer. If you try to do that, you’ll get the following Python error:</p>
+    <p class="lead"><b>NOTE:</b> You can’t apply + operator to two different data types e.g. string <code>+</code> integer. If you try to do that, you’ll get the following Python error:</p>
     <pre><code class="lang-markup">TypeError: can only concatenate str (not "int") to str</code></pre>
 
     <h2>String Replication</h2>
@@ -441,6 +470,10 @@
                 <td>Returns the decimal (base 10) representation of a number (belonging to base 10 by default).</td>
             </tr>
             <tr>
+                <td><code>float(number)</code></td>
+                <td>Returns the floating point representation of a number.</td>
+            </tr>
+            <tr>
                 <td><code>hex(number)</code></td>
                 <td>Returns the hexadecimal (base 16) representation of an integer.</td>
             </tr>
@@ -453,26 +486,83 @@
                 <td>Built-in mutable sequence. If no argument is given, the constructor creates a new empty list. The argument must be an iterable if specified.</td>
             </tr>
             <tr>
-                <td><code>tuple()</code></td>
+                <td><code>tuple(iterable=())</code></td>
                 <td>Built-in immutable sequence. If no argument is given, the constructor returns an empty tuple. If iterable is specified the tuple is initialized from iterable's items.</td>
             </tr>
             <tr>
-                <td><code>dict()</code></td>
+                <td><code>dict(iterable=())</code></td>
                 <td>Built-in immutable sequence to store data values in <code>key: value</code> pairs. A dictionary is a collection which is ordered, changeable and do not allow duplicatation (of keys).</td>
             </tr>
             <tr>
-                <td><code>set()</code></td>
+                <td><code>set(iterable=())</code></td>
                 <td>Builds an unordered collection of unique elements.</td>
             </tr>
             <tr>
-                <td><code>frozenset()</code></td>
+                <td><code>frozenset(iterable=())</code></td>
                 <td>Build an immutable unordered collection of unique elements. Basically sets but immutable.</td>
             </tr>
             <tr>
                 <td><code>bool(object)</code></td>
                 <td>Returns the boolean value of an object.</td>
             </tr>
+            <tr>
+                <td><code>eval(source, globals=None, locals=None)</code></td>
+                <td>Evaluate the given source in the context of globals and locals.</td>
+            </tr>
+            <tr>
+                <td><code>exec(source, globals=None, locals=None)</code></td>
+                <td>Execute the source in the context of globals and locals. The source may be a string or a code object.</td>
+            </tr>
+            <tr>
+                <td><code>compile(source, filename, mode, flags=0, dont_inherit=False, optimize=-1, *, _feature_version=-1)</code></td>
+                <td>Compile the source string (or bytes, if filename is present) into a code object that can be executed by <code>exec()</code> or <code>eval()</code>.</td>
+            </tr>
+            <tr>
+                <td><code>globals()</code></td>
+                <td>Return the dictionary that is used for the global namespace.</td>
+            </tr>
+            <tr>
+                <td><code>locals()</code></td>
+                <td>Return the dictionary that is used for the local namespace.</td>
+            </tr>
+            <tr>
+                <td><code>vars(object=None)</code></td>
+                <td>Return the <code>__dict__</code> attribute of an object or a dictionary corresponding to the current local and global namespace. If no object is given, return a dictionary corresponding to the current global namespace.</td>
+            </tr>
+            <tr>
+                <td><code>dir([object])</code></td>
+                <td>Return an alphabetized list of names in the current local and global namespace. If the optional argument, object, is given, it should be a module or a class, and only names defined by object will be listed. The list of names is sorted alphabetically, and does not include private names (names starting with "<code>_</code>").</td>
+            </tr>
+            <tr>
+                <td><code>filter(function or None, iterable)</code></td>
+                <td>Return an iterator yielding those items of iterable for which <code>function(item)</code> is true. If function is <code>None</code>, return the items that are true.</td>
+            </tr>
+            <tr>
+                <td><code>map(function, iterable, ...)</code></td>
+                <td>Return an iterator that applies function to each item of iterable, yielding the results. If more than one iterable is given, function must take as many arguments as there are iterables.</td>
+            </tr>
         </tbody>
     </table>
+    <hr>
+
+    <h1>How to define our own functions?</h1>
+    <p>We can define our own functions in Python using the <code>def</code> keyword. The syntax is:</p>
+    <pre class="line-numbers"><code class="lang-py">
+def function_name(parameter_list):
+    """Function documentation string."""
+    # Above is optional but considered good practice.
+    # Code block...
+    return value
+    </code></pre>
+    <p>The <code>def</code> keyword is followed by the function name, followed by parentheses containing the parameter list. The parameter list is optional, but if present, must be a list of comma-separated parameter names. The parameter list is followed by a colon and an indented block containing the function body. The indented block must begin with a docstring describing the function.</p>
+    <p>The function body consists of a sequence of statements. The statements are executed in the order in which they appear. Statements may be nested, and the indentation of the statements is significant. The return statement is used to return a value from a function. It is also possible to return a value from a function by assigning a value to the <code>return</code> variable. The return statement can be used in the global scope, in a function, or in a generator. The return statement is optional, and if it is not present, the function will return <code>None</code>. <strong>The returned values is what is started in variables or passed on</strong>.</p>
+    <p>The <code>return</code> statement can be used in the global scope, in a function, or in a generator. The return statement is optional, and if it is not present, the function will return <code>None</code>.</p>
+    <p>Now let us define some functions:</p>
+    <pre class="line-numbers"><code class="lang-py">
+        def print_text(text):
+            """Print the given text."""
+            print(text)
+    </code></pre>
+    <p>The <code>print_text</code> function takes one parameter, <code>text</code>, and prints it to the screen. Since the <code>return</code> statement is not used, the function returns <code>None</code>.</p>
 </body>
 </html>
