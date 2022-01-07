@@ -2,6 +2,7 @@
     scroll-behavior: smooth;
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Noto Sans", sans-serif;
 }
+body {padding-bottom: 100px;}
 
 /* Header font */
 h1, h2, h3, h4, h5, h6 {line-height: 1.5;}
@@ -9,6 +10,18 @@ h2, h3, h4, h5, h6 {margin-top: 16px;}
 h1 {font-size: 40px;}
 h2 {font-size: 32px;}
 h3 {font-size: 24px;}
+
+/* Paragraph text */
+p {
+    text-align: justify;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-language-override: normal;
+}
+
+hr {
+    margin-top: 36px;
+    margin-bottom: 36px;
+}
 
 /* Images */
 #banner {
